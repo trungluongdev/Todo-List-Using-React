@@ -9,8 +9,8 @@ import InputTask from './components/InputTask'
 
 function App() {
     const [tasks, setTasks] = useState([
-        { title: "Learn JS", status: 0, id: 1, status: false },
-        { title: "Code To-do list", status: 0, id: 2, status: false }
+        { title: "Learn JS", id: 1, status: false },
+        { title: "Code To-do list", id: 2, status: false }
     ])
 
     const [newTaskInput, setNewTaskInput] = useState("")
@@ -23,7 +23,7 @@ function App() {
             const task = {
                 id: Date.now(),
                 title: newTaskInput,
-                status: false
+                status: 0
             }
             setTasks([...tasks, task])
             setNewTaskInput("")
